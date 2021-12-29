@@ -1,0 +1,466 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Bike Lite"
+Date "2021-12-28"
+Rev "A"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 "Designer: Matthew Frances"
+$EndDescr
+$Comp
+L Regulator_Switching:LM2576HVT-ADJ U1
+U 1 1 6139728E
+P 5300 3250
+F 0 "U1" H 5300 3617 50  0000 C CNN
+F 1 "LM2576HVT-ADJ" H 5300 3526 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-5_Horizontal_TabDown" H 5300 3000 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2576.pdf" H 5300 3250 50  0001 C CNN
+	1    5300 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 61397E8A
+P 6800 3350
+F 0 "L1" V 6619 3350 50  0000 C CNN
+F 1 "100uH" V 6710 3350 50  0000 C CNN
+F 2 "Inductor_THT:L_Toroid_Vertical_L16.3mm_W7.1mm_P7.11mm_Pulse_H" H 6800 3350 50  0001 C CNN
+F 3 "~" H 6800 3350 50  0001 C CNN
+	1    6800 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 6139A9FD
+P 5850 3500
+F 0 "D1" V 5804 3580 50  0000 L CNN
+F 1 "D" V 5895 3580 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 5850 3500 50  0001 C CNN
+F 3 "~" H 5850 3500 50  0001 C CNN
+	1    5850 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 3350 5850 3350
+$Comp
+L Device:C C2
+U 1 1 6139C6BB
+P 7050 3500
+F 0 "C2" H 7165 3546 50  0000 L CNN
+F 1 "470uF" H 7165 3455 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 7088 3350 50  0001 C CNN
+F 3 "~" H 7050 3500 50  0001 C CNN
+	1    7050 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 6139CDC3
+P 7400 3500
+F 0 "C3" H 7515 3546 50  0000 L CNN
+F 1 "470uF" H 7515 3455 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 7438 3350 50  0001 C CNN
+F 3 "~" H 7400 3500 50  0001 C CNN
+	1    7400 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 6139D083
+P 4250 3300
+F 0 "C1" H 4365 3346 50  0000 L CNN
+F 1 "100uF" H 4365 3255 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 4288 3150 50  0001 C CNN
+F 3 "~" H 4250 3300 50  0001 C CNN
+	1    4250 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 3350 6950 3350
+Connection ~ 7050 3350
+Wire Wire Line
+	4250 3150 4800 3150
+Wire Wire Line
+	4250 3150 3700 3150
+Connection ~ 4250 3150
+Text GLabel 3700 3150 0    50   Input ~ 0
+V_in
+Wire Wire Line
+	5300 3550 5300 3650
+Wire Wire Line
+	6550 3650 7050 3650
+Connection ~ 7050 3650
+$Comp
+L power:GND #PWR03
+U 1 1 6139EF54
+P 5500 3650
+F 0 "#PWR03" H 5500 3400 50  0001 C CNN
+F 1 "GND" H 5505 3477 50  0000 C CNN
+F 2 "" H 5500 3650 50  0001 C CNN
+F 3 "" H 5500 3650 50  0001 C CNN
+	1    5500 3650
+	1    0    0    -1  
+$EndComp
+Connection ~ 5500 3650
+Wire Wire Line
+	5500 3650 5850 3650
+$Comp
+L Device:R R1
+U 1 1 6139F2E4
+P 7850 3500
+F 0 "R1" H 7920 3546 50  0000 L CNN
+F 1 "2.2k" H 7920 3455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 7780 3500 50  0001 C CNN
+F 3 "~" H 7850 3500 50  0001 C CNN
+	1    7850 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6139F765
+P 7850 3900
+F 0 "R2" H 7920 3946 50  0000 L CNN
+F 1 "680" H 7920 3855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 7780 3900 50  0001 C CNN
+F 3 "~" H 7850 3900 50  0001 C CNN
+	1    7850 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 6139FDF8
+P 7850 4050
+F 0 "#PWR04" H 7850 3800 50  0001 C CNN
+F 1 "GND" H 7855 3877 50  0000 C CNN
+F 2 "" H 7850 4050 50  0001 C CNN
+F 3 "" H 7850 4050 50  0001 C CNN
+	1    7850 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3750 7850 3650
+Text GLabel 5800 3150 2    50   Input ~ 0
+FB
+Text GLabel 7850 3700 2    50   Input ~ 0
+FB
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 613A272C
+P 5050 1700
+F 0 "J3" H 5130 1692 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 5130 1601 50  0000 L CNN
+F 2 "BikeLite:Screw_Terminal" H 5050 1700 50  0001 C CNN
+F 3 "~" H 5050 1700 50  0001 C CNN
+	1    5050 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 613A38C5
+P 5050 900
+F 0 "J1" H 5130 892 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 5130 801 50  0000 L CNN
+F 2 "BikeLite:Screw_Terminal" H 5050 900 50  0001 C CNN
+F 3 "~" H 5050 900 50  0001 C CNN
+	1    5050 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 613A3B68
+P 5050 1250
+F 0 "J2" H 5130 1242 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 5130 1151 50  0000 L CNN
+F 2 "BikeLite:Screw_Terminal" H 5050 1250 50  0001 C CNN
+F 3 "~" H 5050 1250 50  0001 C CNN
+	1    5050 1250
+	1    0    0    -1  
+$EndComp
+Text GLabel 4850 1800 0    50   Input ~ 0
+V_in
+$Comp
+L power:GND #PWR01
+U 1 1 613A470D
+P 4850 2200
+F 0 "#PWR01" H 4850 1950 50  0001 C CNN
+F 1 "GND" H 4855 2027 50  0000 C CNN
+F 2 "" H 4850 2200 50  0001 C CNN
+F 3 "" H 4850 2200 50  0001 C CNN
+	1    4850 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 4850 1700 0    50   Input ~ 0
+BATT_IN
+Text GLabel 4850 2100 0    50   Input ~ 0
+BATT_IN
+$Comp
+L power:GND #PWR02
+U 1 1 613AA856
+P 4250 3450
+F 0 "#PWR02" H 4250 3200 50  0001 C CNN
+F 1 "GND" H 4255 3277 50  0000 C CNN
+F 2 "" H 4250 3450 50  0001 C CNN
+F 3 "" H 4250 3450 50  0001 C CNN
+	1    4250 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 613ACE9A
+P 5000 6050
+F 0 "#PWR07" H 5000 5800 50  0001 C CNN
+F 1 "GND" H 5005 5877 50  0000 C CNN
+F 2 "" H 5000 6050 50  0001 C CNN
+F 3 "" H 5000 6050 50  0001 C CNN
+	1    5000 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 5000 5800 5000
+Wire Wire Line
+	5800 5000 5800 5050
+Wire Wire Line
+	5800 4800 5800 4900
+Connection ~ 5800 5000
+$Comp
+L Device:C C4
+U 1 1 613B3C62
+P 5000 5900
+F 0 "C4" H 5115 5946 50  0000 L CNN
+F 1 "4.7uF" H 5115 5855 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 5038 5750 50  0001 C CNN
+F 3 "~" H 5000 5900 50  0001 C CNN
+	1    5000 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 613B6D5D
+P 5650 6400
+F 0 "C5" H 5765 6446 50  0000 L CNN
+F 1 "10nF" H 5765 6355 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 5688 6250 50  0001 C CNN
+F 3 "~" H 5650 6400 50  0001 C CNN
+	1    5650 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 613BAA8E
+P 5000 5350
+F 0 "R5" H 5070 5396 50  0000 L CNN
+F 1 "100k" H 5070 5305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4930 5350 50  0001 C CNN
+F 3 "~" H 5000 5350 50  0001 C CNN
+	1    5000 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 613BC158
+P 5000 5050
+F 0 "R3" H 5070 5096 50  0000 L CNN
+F 1 "10k" H 5070 5005 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4930 5050 50  0001 C CNN
+F 3 "~" H 5000 5050 50  0001 C CNN
+	1    5000 5050
+	1    0    0    -1  
+$EndComp
+Connection ~ 5800 4900
+Wire Wire Line
+	5800 4900 5800 5000
+$Comp
+L BIkeLite:FQP30N06 A1
+U 1 1 613E509B
+P 7350 5250
+F 0 "A1" H 7454 5296 50  0000 L CNN
+F 1 "FQP30N06" H 7454 5205 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 7350 4700 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/308/fqp30n06-1192362.pdf" H 7150 6050 50  0001 C CNN
+	1    7350 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L BIkeLite:NE555P U2
+U 1 1 613E6080
+P 5800 5450
+F 0 "U2" H 6200 5500 50  0000 L CNN
+F 1 "NE555P" H 6200 5400 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 6500 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 6650 5050 50  0001 C CNN
+	1    5800 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 613EB4BE
+P 5050 2100
+F 0 "J4" H 5130 2092 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 5130 2001 50  0000 L CNN
+F 2 "BikeLite:Screw_Terminal" H 5050 2100 50  0001 C CNN
+F 3 "~" H 5050 2100 50  0001 C CNN
+	1    5050 2100
+	1    0    0    -1  
+$EndComp
+Text GLabel 4850 1350 0    50   Input ~ 0
+LITE-
+Text GLabel 4850 1000 0    50   Input ~ 0
+FLSH_DSBL
+Text GLabel 7350 5050 1    50   Input ~ 0
+LITE-
+$Comp
+L power:GND #PWR05
+U 1 1 613FBC25
+P 7350 5450
+F 0 "#PWR05" H 7350 5200 50  0001 C CNN
+F 1 "GND" H 7355 5277 50  0000 C CNN
+F 2 "" H 7350 5450 50  0001 C CNN
+F 3 "" H 7350 5450 50  0001 C CNN
+	1    7350 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 614006DC
+P 6450 5250
+F 0 "R4" V 6657 5250 50  0000 C CNN
+F 1 "10k" V 6566 5250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6380 5250 50  0001 C CNN
+F 3 "~" H 6450 5250 50  0001 C CNN
+	1    6450 5250
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4850 900  0    50   Input ~ 0
+V_out
+Wire Wire Line
+	5300 3650 5500 3650
+Connection ~ 5300 3650
+$Comp
+L Device:D D2
+U 1 1 61410236
+P 6050 3500
+F 0 "D2" V 6004 3580 50  0000 L CNN
+F 1 "D" V 6095 3580 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 6050 3500 50  0001 C CNN
+F 3 "~" H 6050 3500 50  0001 C CNN
+	1    6050 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D3
+U 1 1 6141C230
+P 6300 3500
+F 0 "D3" V 6254 3580 50  0000 L CNN
+F 1 "D" V 6345 3580 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 6300 3500 50  0001 C CNN
+F 3 "~" H 6300 3500 50  0001 C CNN
+	1    6300 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D4
+U 1 1 6141CA7F
+P 6550 3500
+F 0 "D4" V 6504 3580 50  0000 L CNN
+F 1 "D" V 6595 3580 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 6550 3500 50  0001 C CNN
+F 3 "~" H 6550 3500 50  0001 C CNN
+	1    6550 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5850 3350 6050 3350
+Connection ~ 5850 3350
+Connection ~ 6050 3350
+Wire Wire Line
+	6050 3350 6300 3350
+Connection ~ 6300 3350
+Wire Wire Line
+	6300 3350 6550 3350
+Wire Wire Line
+	5850 3650 6050 3650
+Connection ~ 5850 3650
+Connection ~ 6050 3650
+Wire Wire Line
+	6050 3650 6300 3650
+Connection ~ 6300 3650
+Wire Wire Line
+	6300 3650 6550 3650
+Connection ~ 6550 3650
+Wire Wire Line
+	6650 3350 6550 3350
+Connection ~ 6550 3350
+Connection ~ 7400 3350
+Wire Wire Line
+	7050 3350 7400 3350
+Wire Wire Line
+	7050 3650 7400 3650
+Connection ~ 7850 3350
+Wire Wire Line
+	7850 3350 7900 3350
+Wire Wire Line
+	7400 3350 7850 3350
+Text GLabel 4850 1250 0    50   Input ~ 0
+V_out
+Wire Wire Line
+	4800 3350 4700 3350
+Wire Wire Line
+	4700 3650 5300 3650
+Text GLabel 5650 6150 2    50   Input ~ 0
+FLSH_DSBL
+$Comp
+L power:GND #PWR06
+U 1 1 61D2D940
+P 5900 5850
+F 0 "#PWR06" H 5900 5600 50  0001 C CNN
+F 1 "GND" H 5905 5677 50  0000 C CNN
+F 2 "" H 5900 5850 50  0001 C CNN
+F 3 "" H 5900 5850 50  0001 C CNN
+	1    5900 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 6250 5650 5900
+$Comp
+L power:GND #PWR08
+U 1 1 61D339C0
+P 5650 6550
+F 0 "#PWR08" H 5650 6300 50  0001 C CNN
+F 1 "GND" H 5655 6377 50  0000 C CNN
+F 2 "" H 5650 6550 50  0001 C CNN
+F 3 "" H 5650 6550 50  0001 C CNN
+	1    5650 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 5250 7050 5250
+Wire Wire Line
+	5300 5550 5000 5550
+Wire Wire Line
+	5000 5550 5000 5500
+Wire Wire Line
+	5000 5750 5000 5700
+Connection ~ 5000 5550
+Wire Wire Line
+	5300 5200 5000 5200
+Connection ~ 5000 5200
+Wire Wire Line
+	5300 5700 5000 5700
+Connection ~ 5000 5700
+Wire Wire Line
+	5000 5700 5000 5550
+Wire Wire Line
+	5000 4900 5800 4900
+Wire Wire Line
+	4700 3350 4700 3650
+Text GLabel 7900 3350 2    50   Input ~ 0
+V_out
+Text GLabel 5800 4800 1    50   Input ~ 0
+V_out
+$EndSCHEMATC

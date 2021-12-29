@@ -1,0 +1,62 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP FQP30N06
+D 60V 30A 40mOhm N-Channel MOSFET
+F https://www.mouser.com/datasheet/2/308/fqp30n06-1192362.pdf
+$ENDCMP
+#
+$CMP ICM7555xP
+D CMOS General Purpose Timer, 555 compatible, PDIP-8
+K single timer 555
+F http://www.intersil.com/content/dam/Intersil/documents/icm7/icm7555-56.pdf
+$ENDCMP
+#
+$CMP LM555xN
+D Timer, 555 compatible, PDIP-8
+K single timer 555
+F http://www.ti.com/lit/ds/symlink/lm555.pdf
+$ENDCMP
+#
+$CMP LMC555xN
+D CMOS Timer, 555 compatible, PDIP-8
+K single timer 555
+F http://www.ti.com/lit/ds/symlink/lmc555.pdf
+$ENDCMP
+#
+$CMP MC1455P
+D Timer, 555 compatible, PDIP-8
+K single timer 555
+F https://www.onsemi.com/pub/Collateral/MC1455-D.PDF
+$ENDCMP
+#
+$CMP NA555P
+D Precision Timers, 555 compatible, PDIP-8
+K single timer 555
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP NE555P
+D Precision Timers, 555 compatible,  PDIP-8
+K single timer 555
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP SA555P
+D Precision Timers, 555 compatible, PDIP-8
+K single timer 555
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP SE555P
+D Precision Timers, 555 compatible, PDIP-8
+K single timer 555
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP TLC555xP
+D Single LinCMOS Timer, 555 compatible, PDIP-8
+K single timer 555
+F http://www.ti.com/lit/ds/symlink/tlc555.pdf
+$ENDCMP
+#
+#End Doc Library
