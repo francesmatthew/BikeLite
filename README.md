@@ -1,6 +1,6 @@
 ## BikeLite
 
-This is the schematic and PCB for a buck converter and 555 timer to add flashing LEDs to a bike.
+This is the schematic and PCB for a buck converter and 555 timer to add flashing LEDs to my bike.
 
 The output voltage is 5.2V, (theoretically) capable of up to 2A
 
