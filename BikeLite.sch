@@ -161,25 +161,25 @@ F 3 "~" H 5050 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x02 J1
+L Connector:Screw_Terminal_01x02 J2
 U 1 1 613A38C5
-P 5050 900
-F 0 "J1" H 5130 892 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 5130 801 50  0000 L CNN
-F 2 "BikeLite:Screw_Terminal" H 5050 900 50  0001 C CNN
-F 3 "~" H 5050 900 50  0001 C CNN
-	1    5050 900 
+P 5050 1300
+F 0 "J2" H 5130 1292 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 5130 1201 50  0000 L CNN
+F 2 "BikeLite:Screw_Terminal" H 5050 1300 50  0001 C CNN
+F 3 "~" H 5050 1300 50  0001 C CNN
+	1    5050 1300
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x02 J2
+L Connector:Screw_Terminal_01x02 J1
 U 1 1 613A3B68
-P 5050 1250
-F 0 "J2" H 5130 1242 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 5130 1151 50  0000 L CNN
-F 2 "BikeLite:Screw_Terminal" H 5050 1250 50  0001 C CNN
-F 3 "~" H 5050 1250 50  0001 C CNN
-	1    5050 1250
+P 5050 850
+F 0 "J1" H 5130 842 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 5130 751 50  0000 L CNN
+F 2 "BikeLite:Screw_Terminal" H 5050 850 50  0001 C CNN
+F 3 "~" H 5050 850 50  0001 C CNN
+	1    5050 850 
 	1    0    0    -1  
 $EndComp
 Text GLabel 4850 1800 0    50   Input ~ 0
@@ -278,12 +278,12 @@ Wire Wire Line
 $Comp
 L BIkeLite:FQP30N06 A1
 U 1 1 613E509B
-P 7350 5250
-F 0 "A1" H 7454 5296 50  0000 L CNN
-F 1 "FQP30N06" H 7454 5205 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 7350 4700 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/308/fqp30n06-1192362.pdf" H 7150 6050 50  0001 C CNN
-	1    7350 5250
+P 8350 5300
+F 0 "A1" H 8454 5346 50  0000 L CNN
+F 1 "FQP30N06" H 8454 5255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 8350 4750 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/308/fqp30n06-1192362.pdf" H 8150 6100 50  0001 C CNN
+	1    8350 5300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -308,21 +308,19 @@ F 3 "~" H 5050 2100 50  0001 C CNN
 	1    5050 2100
 	1    0    0    -1  
 $EndComp
-Text GLabel 4850 1350 0    50   Input ~ 0
+Text GLabel 4850 950  0    50   Input ~ 0
 LITE-
-Text GLabel 4850 1000 0    50   Input ~ 0
-FLSH_DSBL
-Text GLabel 7350 5050 1    50   Input ~ 0
+Text GLabel 8350 5100 1    50   Input ~ 0
 LITE-
 $Comp
 L power:GND #PWR05
 U 1 1 613FBC25
-P 7350 5450
-F 0 "#PWR05" H 7350 5200 50  0001 C CNN
-F 1 "GND" H 7355 5277 50  0000 C CNN
-F 2 "" H 7350 5450 50  0001 C CNN
-F 3 "" H 7350 5450 50  0001 C CNN
-	1    7350 5450
+P 8350 5500
+F 0 "#PWR05" H 8350 5250 50  0001 C CNN
+F 1 "GND" H 8355 5327 50  0000 C CNN
+F 2 "" H 8350 5500 50  0001 C CNN
+F 3 "" H 8350 5500 50  0001 C CNN
+	1    8350 5500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -336,8 +334,6 @@ F 3 "~" H 6450 5250 50  0001 C CNN
 	1    6450 5250
 	0    -1   -1   0   
 $EndComp
-Text GLabel 4850 900  0    50   Input ~ 0
-V_out
 Wire Wire Line
 	5300 3650 5500 3650
 Connection ~ 5300 3650
@@ -406,14 +402,12 @@ Wire Wire Line
 	7850 3350 7900 3350
 Wire Wire Line
 	7400 3350 7850 3350
-Text GLabel 4850 1250 0    50   Input ~ 0
+Text GLabel 4850 850  0    50   Input ~ 0
 V_out
 Wire Wire Line
 	4800 3350 4700 3350
 Wire Wire Line
 	4700 3650 5300 3650
-Text GLabel 5650 6150 2    50   Input ~ 0
-FLSH_DSBL
 $Comp
 L power:GND #PWR06
 U 1 1 61D2D940
@@ -439,8 +433,6 @@ F 3 "" H 5650 6550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6600 5250 7050 5250
-Wire Wire Line
 	5300 5550 5000 5550
 Wire Wire Line
 	5000 5550 5000 5500
@@ -462,5 +454,28 @@ Wire Wire Line
 Text GLabel 7900 3350 2    50   Input ~ 0
 V_out
 Text GLabel 5800 4800 1    50   Input ~ 0
+V_out
+Text GLabel 6600 5250 2    50   Input ~ 0
+LITE_EN
+Text GLabel 8050 5300 0    50   Input ~ 0
+LITE_EN
+Wire Wire Line
+	4550 1300 4850 1300
+Wire Wire Line
+	4250 1300 4050 1300
+$Comp
+L Device:R R6
+U 1 1 61EA8DAA
+P 4400 1300
+F 0 "R6" V 4607 1300 50  0000 C CNN
+F 1 "10k" V 4516 1300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4330 1300 50  0001 C CNN
+F 3 "~" H 4400 1300 50  0001 C CNN
+	1    4400 1300
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4050 1300 0    50   Input ~ 0
+LITE_EN
+Text GLabel 4850 1400 0    50   Input ~ 0
 V_out
 $EndSCHEMATC
